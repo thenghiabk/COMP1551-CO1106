@@ -31,11 +31,11 @@ namespace LoginForm
         }
     }
 
-    public partial class mainFrame: Form
+    public partial class Form1: Form
     {
         List<User> users;
 
-        public mainFrame() // constructor
+        public Form1() // constructor
         {
             InitializeComponent();
             users = new List<User>();

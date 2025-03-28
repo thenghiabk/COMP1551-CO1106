@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP1551-CO1106", "COMP1551-CO1106\COMP1551-CO1106.csproj", "{19AB981F-BF0E-4756-B162-9DC5DED9FF69}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloGUI", "HelloGUI\HelloGUI.csproj", "{4A8B1928-E0CF-4C96-A1FB-FB801D77ED80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginForm", "LoginForm\LoginForm.csproj", "{7FDB9651-6F2B-4ABE-B934-633A34607804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "FileIO\FileIO.csproj", "{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
