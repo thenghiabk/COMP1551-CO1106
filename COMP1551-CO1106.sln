@@ -5,13 +5,11 @@ VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COMP1551-CO1106", "COMP1551-CO1106\COMP1551-CO1106.csproj", "{19AB981F-BF0E-4756-B162-9DC5DED9FF69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagementSystem", "ContactManagementSystem\ContactManagementSystem.csproj", "{E566613E-696C-431B-90B7-6439E2F714F8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloGUI", "HelloGUI\HelloGUI.csproj", "{4A8B1928-E0CF-4C96-A1FB-FB801D77ED80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginForm", "LoginForm\LoginForm.csproj", "{7FDB9651-6F2B-4ABE-B934-633A34607804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "FileIO\FileIO.csproj", "{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManagementSystemBasic", "ContactManagementSystemBasic\ContactManagementSystemBasic.csproj", "{951D542E-A9B9-4FAD-84A2-1B2B196391CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{19AB981F-BF0E-4756-B162-9DC5DED9FF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19AB981F-BF0E-4756-B162-9DC5DED9FF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19AB981F-BF0E-4756-B162-9DC5DED9FF69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E566613E-696C-431B-90B7-6439E2F714F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E566613E-696C-431B-90B7-6439E2F714F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E566613E-696C-431B-90B7-6439E2F714F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E566613E-696C-431B-90B7-6439E2F714F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4A8B1928-E0CF-4C96-A1FB-FB801D77ED80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4A8B1928-E0CF-4C96-A1FB-FB801D77ED80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A8B1928-E0CF-4C96-A1FB-FB801D77ED80}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +29,10 @@ Global
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FDB9651-6F2B-4ABE-B934-633A34607804}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBF0BBE6-EDD9-4D21-8B92-B06BED62B917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951D542E-A9B9-4FAD-84A2-1B2B196391CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951D542E-A9B9-4FAD-84A2-1B2B196391CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951D542E-A9B9-4FAD-84A2-1B2B196391CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951D542E-A9B9-4FAD-84A2-1B2B196391CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
