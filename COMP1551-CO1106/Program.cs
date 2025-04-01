@@ -6,10 +6,53 @@ using System.Threading.Tasks;
 
 namespace COMP1551_CO1106
 {
+    class Contact
+    {
+        // fields / attributes
+        private string name;
+        private string phoneNumber;
+        private string email;
+
+        // constructor
+        public Contact()
+        {
+            this.name = "Unknown Name";
+            this.phoneNumber = "Unknown Phone Number";
+            this.email = "Unknown Email";
+        }
+
+        public Contact(string name, string phoneNumber, string email)
+        {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }
+
+        // methods (helpers)
+        public void displayInfo()
+        {
+            Console.WriteLine($"Name: {this.name}");
+            Console.WriteLine($"Phone Number: {this.phoneNumber}");
+            Console.WriteLine($"Email: {this.email}");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+
+            /*
+             * Example 10: Classes
+             * See more: https://www.w3schools.com/cs/cs_classes.php
+             */
+
+            Contact contact1 = new Contact("John Doe", "123-456-7890", "2Eo8l@example.com");
+            contact1.displayInfo();
+
+            Contact contact2 = new Contact("David Smith", "987-654-3210", "1N2dM@example.com");
+            contact2.displayInfo();
+
+
             /*
              * Example 1: Output
              * See more: https://www.w3schools.com/cs/cs_output.php
@@ -171,7 +214,32 @@ namespace COMP1551_CO1106
             //    }
             //}
 
-            
+            /*
+             * Example 9: Arrays
+             * See more: https://www.w3schools.com/cs/cs_arrays.php
+             */
+
+            //int[] x = {3, 4, 5, 6, 7, 8, 9, 10};
+
+            //for (int i = 0; i < x.Length; i++)
+            //{
+            //    Console.WriteLine(x[i]);
+            //}
+
+            //String[] names = { "Alice", "Bob", "Charlie", "David", "Eve" };
+
+            //for (int i = 0; i < names.Length; i++)
+            //{
+            //    Console.WriteLine(names[i]);
+            //}
+
+
+
+
+
+
         }
     }
+
+
 }

@@ -1,20 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ContactManagementSystemBasic
+namespace ContactManagementSystemOOP
 {
     class Contact
     {
-        //TODO
+        // TODO: Create a Contact class
     }
     public class Program
     {
         // Maximum number of contacts we can store (you can change this)
         static int maxContacts = 100;
 
-        // Our arrays to store contact information
-        static string[] names = new string[maxContacts];
-        static string[] phoneNumbers = new string[maxContacts];
-        static string[] emails = new string[maxContacts];
+        // TODO: Create an array to store contact objects instead of individual arrays for names, phone numbers, and emails
 
         // Keep track of how many contacts we have
         static int contactCount = 0;
@@ -72,14 +73,7 @@ namespace ContactManagementSystemBasic
         {
             if (contactCount < maxContacts)
             {
-                Console.Write("Enter contact name: ");
-                names[contactCount] = Console.ReadLine();
-
-                Console.Write("Enter phone number: ");
-                phoneNumbers[contactCount] = Console.ReadLine();
-
-                Console.Write("Enter email address: ");
-                emails[contactCount] = Console.ReadLine();
+                // TODO: Create a contact object and add it to the array of contacts
 
                 contactCount++; // Important: Increment the count!
 
@@ -99,10 +93,8 @@ namespace ContactManagementSystemBasic
             }
 
             Console.WriteLine("Contacts:");
-            for (int i = 0; i < contactCount; i++)
-            {
-                Console.WriteLine($"  Name: {names[i]}, Phone: {phoneNumbers[i]}, Email: {emails[i]}");
-            }
+            
+            // TODO: Loop through the array of contacts and display them
         }
 
         static void FindContact()
@@ -117,15 +109,9 @@ namespace ContactManagementSystemBasic
             string searchName = Console.ReadLine();
 
             bool found = false;
-            for (int i = 0; i < contactCount; i++)
-            {
-                //Use .Equals and ignore cases when comparing
-                if (names[i].Equals(searchName, StringComparison.OrdinalIgnoreCase))
-                {
-                    Console.WriteLine($"  Name: {names[i]}, Phone: {phoneNumbers[i]}, Email: {emails[i]}");
-                    found = true;
-                }
-            }
+
+            // TODO: Loop through the array of contacts and find the contact with the matching name
+
             if (!found)
             {
                 Console.WriteLine("Contact Not Found.");
@@ -145,29 +131,11 @@ namespace ContactManagementSystemBasic
 
             int indexToRemove = -1; // -1 means we haven't found it yet
 
-            for (int i = 0; i < contactCount; i++)
-            {
-                if (names[i].Equals(nameToRemove, StringComparison.OrdinalIgnoreCase))
-                {
-                    indexToRemove = i;
-                    break; // Exit the loop once we find it
-                }
-            }
+            // TODO: Loop through the array of contacts and find the contact with the matching name
 
             if (indexToRemove != -1)
             {
-                // Shift elements to fill the gap
-                for (int i = indexToRemove; i < contactCount - 1; i++)
-                {
-                    names[i] = names[i + 1];
-                    phoneNumbers[i] = phoneNumbers[i + 1];
-                    emails[i] = emails[i + 1];
-                }
-
-                // "Clear" the last element (not strictly necessary, but good practice)
-                names[contactCount - 1] = null;
-                phoneNumbers[contactCount - 1] = null;
-                emails[contactCount - 1] = null;
+                // TODO: Remove the contact from the array based on the index
 
                 contactCount--; // Decrement the count
 
