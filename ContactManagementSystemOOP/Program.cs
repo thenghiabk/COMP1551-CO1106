@@ -8,14 +8,34 @@ namespace ContactManagementSystemOOP
 {
     class Contact
     {
-        // TODO: Create a Contact class
+        // fields / attributes
+        private string name;
+        private string phoneNumber;
+        private string email;
+
+        // constructor
+        public Contact(string name, string phoneNumber, string email)
+        {
+            this.name = name;
+            this.phoneNumber = phoneNumber;
+            this.email = email;
+        }
+
+        // methods (helpers)
+        public void displayInfo()
+        {
+            Console.WriteLine($"Name: {this.name}");
+            Console.WriteLine($"Phone Number: {this.phoneNumber}");
+            Console.WriteLine($"Email: {this.email}");
+        }
     }
     public class Program
     {
         // Maximum number of contacts we can store (you can change this)
         static int maxContacts = 100;
 
-        // TODO: Create an array to store contact objects instead of individual arrays for names, phone numbers, and emails
+        // Create an array to store contact objects instead of individual arrays for names, phone numbers, and emails
+        static Contact[] contacts = new Contact[maxContacts];
 
         // Keep track of how many contacts we have
         static int contactCount = 0;
@@ -27,12 +47,12 @@ namespace ContactManagementSystemOOP
             while (running)
             {
                 Console.WriteLine("\nContact Management System");
-                Console.WriteLine("1. Add Contact"); // Bao + Khang + Duy
-                Console.WriteLine("2. Display Contacts"); // Vinh + Nguyen + Han
-                Console.WriteLine("3. Find a Contact"); // Khanh + King
-                Console.WriteLine("4. Remove a Contact"); // Triet + Vu
-                Console.WriteLine("5. Edit a Contact"); // Hieu + Thuy
-                Console.WriteLine("6. Clear Contacts"); // James
+                Console.WriteLine("1. Add Contact"); // JAMES+AN+VINH
+                Console.WriteLine("2. Display Contacts"); // KHANH+KING
+                Console.WriteLine("3. Find a Contact"); // HAN+NGUYEN+VINH
+                Console.WriteLine("4. Remove a Contact");// THUY+HIEU+VU
+                Console.WriteLine("5. Edit a Contact"); // DUY+BAO+CUONG+KHANG
+                Console.WriteLine("6. Clear Contacts");  // KHANH+KING
                 Console.WriteLine("7. Exit");
                 Console.Write("Choose an option: ");
 
@@ -73,7 +93,18 @@ namespace ContactManagementSystemOOP
         {
             if (contactCount < maxContacts)
             {
-                // TODO: Create a contact object and add it to the array of contacts
+                // Create a contact object and add it to the array of contacts
+
+                Console.Write("Enter contact name: ");
+                String name = Console.ReadLine();
+
+                Console.Write("Enter phone number: ");
+                String phoneNumber = Console.ReadLine();
+
+                Console.Write("Enter email address: ");
+                String email = Console.ReadLine();
+
+                contacts[contactCount] = new Contact(name, phoneNumber, email);
 
                 contactCount++; // Important: Increment the count!
 
@@ -93,8 +124,14 @@ namespace ContactManagementSystemOOP
             }
 
             Console.WriteLine("Contacts:");
-            
-            // TODO: Loop through the array of contacts and display them
+
+            // Loop through the array of contacts and display them
+            for (int i = 0; i < contactCount; i++)
+            {
+                Console.WriteLine($"Contact {i + 1}:");
+                contacts[i].displayInfo();
+                Console.WriteLine();
+            }
         }
 
         static void FindContact()
@@ -111,6 +148,14 @@ namespace ContactManagementSystemOOP
             bool found = false;
 
             // TODO: Loop through the array of contacts and find the contact with the matching name
+
+            for (int i = 0; i < contactCount; i++)
+            {
+                if(contacts[i].name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+                {
+
+                }
+            }
 
             if (!found)
             {

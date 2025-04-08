@@ -46,11 +46,13 @@ namespace COMP1551_CO1106
              * See more: https://www.w3schools.com/cs/cs_classes.php
              */
 
-            Contact contact1 = new Contact("John Doe", "123-456-7890", "2Eo8l@example.com");
-            contact1.displayInfo();
+            Contact john = new Contact("John Doe", "123-456-7890", "2Eo8l@example.com");
+            john.displayInfo();
 
-            Contact contact2 = new Contact("David Smith", "987-654-3210", "1N2dM@example.com");
-            contact2.displayInfo();
+            Contact david = new Contact("David Smith", "987-654-3210", "1N2dM@example.com");
+            david.displayInfo();
+
+            Contact[] contacts = new Contact[100];
 
 
             /*

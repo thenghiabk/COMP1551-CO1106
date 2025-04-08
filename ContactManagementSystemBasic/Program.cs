@@ -2,10 +2,7 @@
 
 namespace ContactManagementSystemBasic
 {
-    class Contact
-    {
-        //TODO
-    }
+    
     public class Program
     {
         // Maximum number of contacts we can store (you can change this)
