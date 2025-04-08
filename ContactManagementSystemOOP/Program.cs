@@ -28,6 +28,22 @@ namespace ContactManagementSystemOOP
             Console.WriteLine($"Phone Number: {this.phoneNumber}");
             Console.WriteLine($"Email: {this.email}");
         }
+
+        public bool FindContactByName(string searchName)
+        {
+            if (this.name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public void UpdateInfo(string newPhoneNumber, string newEmail)
+        {
+            this.phoneNumber = newPhoneNumber;
+            this.email = newEmail;
+        }
     }
     public class Program
     {
@@ -73,10 +89,10 @@ namespace ContactManagementSystemOOP
                         RemoveContact();
                         break;
                     case "5":
-                        //TODO: EditContact
+                        EditContact();
                         break;
                     case "6":
-                        //TODO: Clear all contacts
+                        ClearAllContacts();
                         break;
                     case "7":
                         running = false;
@@ -89,6 +105,58 @@ namespace ContactManagementSystemOOP
 
             Console.WriteLine("Goodbye!");
         }
+
+        private static void ClearAllContacts()
+        {
+            for(int i = 0; i < contactCount; i++)
+            {
+                contacts[i] = null; // Set each contact to null
+            }
+
+            contactCount = 0; // Reset the count
+        }
+
+        private static void EditContact()
+        {
+            if (contactCount == 0)
+            {
+                Console.WriteLine("No contacts to edit.");
+                return;
+            }
+
+            Console.Write("Enter the name of the contact to edit: ");
+            string nameToEdit = Console.ReadLine();
+
+            int indexToEdit = -1; // -1 means we haven't found it yet
+
+            for (int i = 0; i < contactCount; i++)
+            {
+                if (contacts[i].FindContactByName(nameToEdit))
+                {
+                    indexToEdit = i;
+                    break; // Exit the loop once we find the contact
+                }
+            }
+
+            if (indexToEdit != -1)
+            {
+
+                Console.Write("Enter new phone number: ");
+                String newPhoneNumber = Console.ReadLine();
+
+                Console.Write("Enter new email address: ");
+                String newEmail = Console.ReadLine();
+
+                contacts[indexToEdit].UpdateInfo(newPhoneNumber, newEmail);
+
+                Console.WriteLine("Contact has been edited.");
+            }
+            else
+            {
+                Console.WriteLine("Contact not found.");
+            }
+        }
+
         static void AddContact()
         {
             if (contactCount < maxContacts)
@@ -147,13 +215,14 @@ namespace ContactManagementSystemOOP
 
             bool found = false;
 
-            // TODO: Loop through the array of contacts and find the contact with the matching name
+            // Loop through the array of contacts and find the contact with the matching name
 
             for (int i = 0; i < contactCount; i++)
             {
-                if(contacts[i].name.Equals(searchName, StringComparison.OrdinalIgnoreCase))
+                if(contacts[i].FindContactByName(searchName))
                 {
-
+                    contacts[i].displayInfo();
+                    found = true;
                 }
             }
 
@@ -176,11 +245,28 @@ namespace ContactManagementSystemOOP
 
             int indexToRemove = -1; // -1 means we haven't found it yet
 
-            // TODO: Loop through the array of contacts and find the contact with the matching name
+            for (int i = 0; i < contactCount; i++)
+            {
+                if (contacts[i].FindContactByName(nameToRemove))
+                {
+                    indexToRemove = i;
+                    break; // Exit the loop once we find the contact
+                }
+            }
 
             if (indexToRemove != -1)
             {
-                // TODO: Remove the contact from the array based on the index
+                // Remove the contact from the array based on the index
+
+                contacts[indexToRemove] = null; // Set the contact to null
+
+                // Shift elements to fill the gap
+                for (int i = indexToRemove; i < contactCount - 1; i++)
+                {
+                    contacts[i] = contacts[i + 1];
+                }
+
+                contacts[contactCount - 1] = null;
 
                 contactCount--; // Decrement the count
 
